@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="gui.ScheduleController"
+      spacing="14"
+      alignment="TOP_CENTER"
+      stylesheets="@../style.css"
+      prefWidth="520"
+      prefHeight="420">
+
+    <children>
+        <Label text="Редактор расписания" styleClass="title-label"/>
+
+        <Label text="Изменяйте занятия по дням и нажмите «Сохранить»"
+               styleClass="subtitle-label"/>
+
+        <TableView fx:id="table" prefWidth="480" prefHeight="260">
+            <columns>
+                <TableColumn fx:id="dayCol" text="День" prefWidth="160"/>
+                <TableColumn fx:id="activityCol" text="Занятие / время" prefWidth="300"/>
+            </columns>
+        </TableView>
+
+        <HBox spacing="12" alignment="CENTER">
+            <Button text="Сохранить" onAction="#onSave" styleClass="menu-button"/>
+            <Button text="Закрыть" onAction="#onClose" styleClass="menu-button"/>
+        </HBox>
+    </children>
+
+    <padding>
+        <Insets top="18" right="18" bottom="18" left="18"/>
+    </padding>
+</VBox>

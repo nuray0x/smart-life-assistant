@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="gui.SleepController"
+      spacing="16"
+      alignment="CENTER"
+      stylesheets="@../style.css"
+      prefWidth="460"
+      prefHeight="360">
+
+    <children>
+        <Label text="Анализ сна" styleClass="title-label"/>
+
+        <Label text="Сколько часов вы спали этой ночью?" styleClass="subtitle-label"/>
+
+        <VBox spacing="8" alignment="CENTER" prefWidth="380">
+            <Slider fx:id="sleepSlider"
+                    min="0" max="24" value="8"
+                    majorTickUnit="4"
+                    minorTickCount="3"
+                    showTickMarks="true"
+                    showTickLabels="true"
+                    snapToTicks="false"/>
+
+            <HBox spacing="10" alignment="CENTER">
+                <Label text="Вы выбрали:"/>
+                <Label fx:id="sleepValueLabel" text="8.0" styleClass="sleep-value"/>
+                <Label text="часов"/>
+            </HBox>
+        </VBox>
+
+        <Button text="Проанализировать"
+                onAction="#onAnalyze"
+                styleClass="menu-button"/>
+
+        <TextArea fx:id="resultArea"
+                  styleClass="result-area"
+                  prefRowCount="6"
+                  wrapText="true"
+                  editable="false"
+                  prefWidth="420"/>
+
+        <Button text="Закрыть"
+                onAction="#onClose"
+                styleClass="menu-button"/>
+    </children>
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+</VBox>

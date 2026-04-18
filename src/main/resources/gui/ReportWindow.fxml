@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="gui.ReportController"
+      spacing="15"
+      alignment="CENTER"
+      stylesheets="@../style.css"
+      prefWidth="600"
+      prefHeight="400">
+
+    <children>
+        <Label text="Ежедневный отчёт"
+               styleClass="title-label"/>
+
+        <TextArea fx:id="reportArea"
+                  wrapText="true"
+                  editable="false"
+                  prefWidth="560"
+                  prefHeight="280"/>
+
+        <HBox spacing="10" alignment="CENTER">
+            <Button text="Сохранить в файл"
+                    onAction="#onSave"
+                    styleClass="menu-button"/>
+            <Button text="Закрыть"
+                    onAction="#onClose"
+                    styleClass="menu-button"/>
+        </HBox>
+    </children>
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+</VBox>

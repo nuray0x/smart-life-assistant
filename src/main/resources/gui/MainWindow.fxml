@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="gui.MainController">
+
+    <top>
+        <VBox alignment="CENTER" spacing="4" BorderPane.alignment="CENTER">
+            <Label text="Smart Life Assistant" styleClass="title-label"/>
+            <Label text="Помощник по сну, привычкам и расписанию" styleClass="subtitle-label"/>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox spacing="15" alignment="CENTER" styleClass="menu-box">
+
+            <Button fx:id="scheduleButton" text="Расписание"
+                    onAction="#onScheduleEditor" styleClass="menu-button"/>
+
+            <Button fx:id="sleepButton" text="Сон / анализ"
+                    onAction="#onSleepAnalyze" styleClass="menu-button"/>
+
+            <Button fx:id="habitsButton" text="Привычки"
+                    onAction="#onHabits" styleClass="menu-button"/>
+
+            <Button fx:id="reportButton" text="Ежедневный отчёт"
+                    onAction="#onReport" styleClass="menu-button"/>
+
+            <Button text="Мой профиль"
+                    onAction="#onProfile" styleClass="menu-button"/>
+
+            <Button text="Выйти"
+                    onAction="#onLogout" styleClass="menu-button"/>
+        </VBox>
+    </center>
+
+</BorderPane>

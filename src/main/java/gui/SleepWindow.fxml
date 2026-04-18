@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="gui.SleepController"
+      spacing="15"
+      alignment="CENTER"
+      stylesheets="@../style.css"
+      prefWidth="400"
+      prefHeight="280">
+
+    <children>
+        <Label text="Анализ сна"
+               styleClass="title-label"/>
+
+        <Label text="Сколько часов вы спали этой ночью?"/>
+
+        <TextField fx:id="sleepField"
+                   promptText="Например, 7"/>
+
+        <Button text="Проанализировать"
+                onAction="#onAnalyze"
+                styleClass="menu-button"/>
+
+        <TextArea fx:id="resultArea"
+                  prefRowCount="5"
+                  wrapText="true"
+                  editable="false"/>
+
+        <Button text="Закрыть"
+                onAction="#onClose"
+                styleClass="menu-button"/>
+    </children>
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+</VBox>

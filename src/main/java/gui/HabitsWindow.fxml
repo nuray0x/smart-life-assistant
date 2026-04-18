@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="gui.HabitsController"
+      spacing="12"
+      alignment="CENTER"
+      stylesheets="@../style.css"
+      prefWidth="420"
+      prefHeight="320">
+
+    <children>
+        <Label text="Привычки"
+               styleClass="title-label"/>
+
+        <ListView fx:id="habitsList"
+                  prefHeight="150"
+                  prefWidth="380"/>
+
+        <HBox spacing="10" alignment="CENTER">
+            <TextField fx:id="newHabitField"
+                       promptText="Новая привычка..."
+                       prefWidth="230"/>
+            <Button text="Добавить"
+                    onAction="#onAddHabit"
+                    styleClass="menu-button"/>
+        </HBox>
+
+        <HBox spacing="10" alignment="CENTER">
+            <Button text="Удалить выбранную"
+                    onAction="#onDeleteHabit"
+                    styleClass="menu-button"/>
+            <Button text="Закрыть"
+                    onAction="#onClose"
+                    styleClass="menu-button"/>
+        </HBox>
+    </children>
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+</VBox>
