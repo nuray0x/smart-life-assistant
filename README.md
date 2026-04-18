@@ -1,10 +1,12 @@
-# smart-life-assistant
-Desktop application for student life management using Java and JavaFX
+# Smart Life Assistant
+
+JavaFX desktop application for managing student tasks, schedules, and daily productivity.
+
 ## Features
 - Task management
 - Schedule tracking
 - JavaFX interface
 
 ## How to run
-1. Open in IntelliJ IDEA
+1. Open the project in IntelliJ IDEA
 2. Run App.java
